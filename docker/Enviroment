@@ -1,4 +1,4 @@
 PYTHONUNBUFFERED=1
 DJANGO_SETTINGS_MODULE=config.settings.local_development
 SECRET_KEY=""
-DATABASE_URL=postgis://postgres:postgres@db/app_db
+DATABASE_URL=postgres://postgres:postgres@db/app_db
