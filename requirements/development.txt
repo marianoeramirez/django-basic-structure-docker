@@ -1,0 +1,4 @@
+-r base.txt
+
+#docs
+Sphinx==1.5.5
