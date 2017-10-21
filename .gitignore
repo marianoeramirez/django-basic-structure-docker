@@ -62,11 +62,11 @@ local_testing.py
 *.~
 *.swp
 static/
+media/*
 erl_crash.dump
 local_settings_production.py
 *.db
 *.sqlite3
-static/static-only
 workspace.xml
 .idea/workspace.xml
 debug.log
@@ -108,4 +108,3 @@ ENV/
 # Node and webpack stuff
 node_modules/
 webpack-stats-local.json
-ahsante/assets/bundles/local/
