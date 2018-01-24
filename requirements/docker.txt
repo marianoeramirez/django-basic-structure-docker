@@ -1,2 +1,2 @@
 #docker
-docker-compose==1.16.1
+docker-compose==1.18.0
