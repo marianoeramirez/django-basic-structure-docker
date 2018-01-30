@@ -27,6 +27,5 @@ Usage
 To use this repository just use the ``template`` option of `django-admin
 <https://docs.djangoproject.com/en/1.11/ref/django-admin/#startproject>`_::
 
-    $ django-admin startproject --template=https://github.com/bomba1990/django-basic-structure-docker/archive/master.zip [projectname]
-
+    $ django-admin startproject --template=https://github.com/bomba1990/django-basic-structure-docker/archive/master.zip --extension py,conf [projectname]
 
