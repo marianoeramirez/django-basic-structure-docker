@@ -9,7 +9,7 @@ Meta
 ----
 
 Author:
-    Mariano Ramires
+    Mariano Ramirez
 
 Status:
     maintained, in development
