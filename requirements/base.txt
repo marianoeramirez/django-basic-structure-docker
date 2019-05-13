@@ -6,4 +6,4 @@ djangorestframework==3.9.1
 pytz==2017.3 #timezone
 argon2-cffi==18.1.0 # hash password generator
 dj-database-url==0.4.2
-python-dotenv==0.7.1
+python-dotenv==0.10.2
