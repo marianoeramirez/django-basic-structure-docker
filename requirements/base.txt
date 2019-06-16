@@ -1,5 +1,5 @@
 #general
-Django==1.11.9
+Django==1.11.21
 psycopg2==2.7.3.2
 Pillow==5.0.0
 djangorestframework==3.9.1
