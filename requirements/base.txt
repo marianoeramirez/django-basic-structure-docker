@@ -1,7 +1,7 @@
 #general
 Django==1.11.21
 psycopg2==2.7.3.2
-Pillow==5.0.0
+Pillow==6.0.0
 djangorestframework==3.9.1
 pytz==2019.1 #timezone
 argon2-cffi==18.1.0 # hash password generator
