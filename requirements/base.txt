@@ -4,6 +4,6 @@ psycopg2==2.7.3.2
 Pillow==6.0.0
 djangorestframework==3.9.1
 pytz==2019.1 #timezone
-argon2-cffi==18.1.0 # hash password generator
+argon2-cffi==19.1.0 # hash password generator
 dj-database-url==0.5.0
 python-dotenv==0.7.1
