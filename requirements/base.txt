@@ -1,6 +1,6 @@
 #general
 Django==1.11.23
-psycopg2==2.7.3.2
+psycopg2==2.8.3
 Pillow==6.0.0
 djangorestframework==3.9.1
 pytz==2019.1 #timezone
