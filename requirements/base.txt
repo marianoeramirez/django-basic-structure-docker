@@ -1,9 +1,11 @@
 #general
-Django==1.11.23
-psycopg2==2.8.3
-Pillow==6.0.0
-djangorestframework==3.9.1
-pytz==2019.1 #timezone
-argon2-cffi==19.1.0 # hash password generator
+Django==2.2.10
+pytz==2019.3
+python-dotenv==0.11.0
+psycopg2-binary==2.8.4
+argon2-cffi==19.2.0
+Pillow==7.0.0
+redis==3.4.1
+celery==4.4.0
 dj-database-url==0.5.0
-python-dotenv==0.10.3
+djangorestframework==3.11.0

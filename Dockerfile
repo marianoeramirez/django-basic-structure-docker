@@ -1,26 +1,32 @@
-FROM python:3.6.2-alpine3.6
+FROM python:3.8-alpine3.11
 ARG REQUIREMENTS
-RUN apk update
-RUN apk add --no-cache \
-        postgresql-dev \
+
+COPY requirements /tmp
+
+
+RUN apk add --no-cache --virtual .build-deps \
+       postgresql-dev \
+       musl-dev \
+   && apk add --no-cache \
         postgresql-client \
         libffi-dev \
-        gcc \
         bash \
         zlib-dev \
+        gcc \
         jpeg-dev \
         gettext \
-        linux-headers
-
-RUN apk add musl-dev
-RUN apk add --no-cache --virtual .build-deps-testing \
+        linux-headers \
+        dbus git \
+    && apk add --no-cache  \
         --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing \
-        gdal-dev \
+        --repository http://dl-cdn.alpinelinux.org/alpine/edge/community \
+        --repository http://dl-cdn.alpinelinux.org/alpine/edge/main \
         geos-dev \
-        proj4-dev
+        gdal-dev proj proj-dev \
+    && pip3 install --no-cache-dir --upgrade pip \
+    && pip3 install --no-cache-dir -r requirements/$REQUIREMENTS
 
-RUN mkdir /code
-ADD requirements /code/requirements/
+
+ADD . /code
 WORKDIR /code
-RUN pip3.6 install -r requirements/$REQUIREMENTS
 
