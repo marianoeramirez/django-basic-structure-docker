@@ -1,5 +1,5 @@
 #general
-Django==2.2.10
+Django==3.0.3
 pytz==2019.3
 python-dotenv==0.11.0
 psycopg2-binary==2.8.4
