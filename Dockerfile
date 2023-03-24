@@ -3,8 +3,6 @@ ARG REQUIREMENTS
 
 COPY requirements /tmp
 
-RUN ls /tmp/
-
 RUN apk add --no-cache --virtual .build-deps \
        postgresql-dev \
        musl-dev \
@@ -25,7 +23,7 @@ RUN apk add --no-cache --virtual .build-deps \
         geos-dev \
         gdal-dev proj proj-dev \
     && pip3 install --no-cache-dir --upgrade pip \
-    && pip3 install --no-cache-dir -r /tmp/requirements/$REQUIREMENTS
+    && pip3 install --no-cache-dir -r /tmp/$REQUIREMENTS
 
 
 ADD . /code
