@@ -34,5 +34,5 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: bomba1990/django-base:alpine3.12
+        tags: bomba1990/django-base:latest
         build-args: REQUIREMENTS=production.txt
