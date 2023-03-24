@@ -24,7 +24,7 @@ RUN apk add --no-cache --virtual .build-deps \
         geos-dev \
         gdal-dev proj proj-dev \
     && pip3 install --no-cache-dir --upgrade pip \
-    && pip3 install --no-cache-dir -r requirements/$REQUIREMENTS
+    && pip3 install --no-cache-dir -r /tmp/$REQUIREMENTS
 
 
 ADD . /code
