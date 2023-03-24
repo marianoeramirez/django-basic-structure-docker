@@ -1,7 +1,8 @@
-FROM python:3.9-alpine3.12
+FROM python:3.11-alpine3.17
 ARG REQUIREMENTS
 
 COPY requirements /tmp
+
 
 
 RUN apk add --no-cache --virtual .build-deps \
@@ -24,7 +25,7 @@ RUN apk add --no-cache --virtual .build-deps \
         geos-dev \
         gdal-dev proj proj-dev \
     && pip3 install --no-cache-dir --upgrade pip \
-    && pip3 install --no-cache-dir -r requirements/$REQUIREMENTS
+    && pip3 install --no-cache-dir -r /tmp/requirements/$REQUIREMENTS
 
 
 ADD . /code
