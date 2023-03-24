@@ -1,7 +1,8 @@
-FROM python:3.11-alpine3.17
+FROM python:3.9-alpine3.12
 ARG REQUIREMENTS
 
 COPY requirements /tmp
+
 
 RUN apk add --no-cache --virtual .build-deps \
        postgresql-dev \
@@ -16,13 +17,15 @@ RUN apk add --no-cache --virtual .build-deps \
         gettext \
         linux-headers \
         dbus git \
+    && apk add --no-cache  \
+        --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing \
+        --repository http://dl-cdn.alpinelinux.org/alpine/edge/community \
+        --repository http://dl-cdn.alpinelinux.org/alpine/edge/main \
         geos-dev \
         gdal-dev proj proj-dev \
-        
     && pip3 install --no-cache-dir --upgrade pip \
-    && pip3 install --no-cache-dir -r /tmp/$REQUIREMENTS
+    && pip3 install --no-cache-dir -r requirements/$REQUIREMENTS
 
 
 ADD . /code
 WORKDIR /code
-
