@@ -3,7 +3,6 @@ ARG REQUIREMENTS
 
 COPY requirements /tmp
 
-RUN ls /tmp/requirements
 RUN ls /tmp/
 
 RUN apk add --no-cache --virtual .build-deps \
