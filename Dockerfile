@@ -17,6 +17,7 @@ RUN apk add --no-cache --virtual .build-deps \
         gettext \
         linux-headers \
         dbus git \
+        python3-dev build-base pcre-dev \
     && apk add --no-cache  \
         --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing \
         --repository http://dl-cdn.alpinelinux.org/alpine/edge/community \
